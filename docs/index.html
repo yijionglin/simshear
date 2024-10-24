@@ -67,6 +67,7 @@
       document.getElementById('tactile_prediction'),
       document.getElementById('rand_axis'),
       document.getElementById('rand_objects'),
+      document.getElementById('perturb'),
       document.getElementById('gravity_demo')];
       
       // Observe each video
@@ -133,7 +134,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">AnyRotate: Gravity Invariant In-Hand Rotation with Sim-to-Real Touch</h1>
+          <h1 class="title is-2 publication-title">AnyRotate: Gravity Invariant In-Hand Object Rotation with Sim-to-Real Touch</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block" style="margin-right: 5px;">
               <a href="https://maxyang27896.github.io/">Max Yang</a>,</span>
@@ -158,13 +159,17 @@
             <span class="author-block" style="margin-right: 5px;">
               <a href="https://cityinthesky.co.uk/">David A.W. Barton</a>,
             </span>
-            <span class="author-block" style="margin-right: 5px;">
+            <span class="author-block" style="margin-right: 5px; margin-bottom: 5px;">
               <a href="https://lepora.com/">Nathan F. Lepora</a>
             </span>
           </div>
 
-          <div class="is-size-5 publication-authors">
+          <div class="is-size-5 publication-authors" style="margin-bottom: 5px;">
             <span class="author-block">University of Bristol</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><b><i>Conference on Robot Learning (CoRL) 2024</i></b></span>
           </div>
 
           <div class="column has-text-centered">
@@ -189,15 +194,15 @@
                 </a>
               </span> -->
               <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=0pli0-QvTgc"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video (coming Soon)</span>
+                  <span>Video</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Code Link. -->
               <!-- <span class="link-block">
                 <a href=""
@@ -452,6 +457,20 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-sixths">
+          <h2 class="title is-3">Robust to grasp disturbances</h2>
+          <video id="perturb" autoplay muted loop playsinline height=100%">
+            <source src="./static/videos/robust_perturbations.mov"
+                    type="video/mp4">
+          </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
           <h2 class="title is-3">Robust of changing gravity directions</h2>
           <video id="gravity_demo" autoplay muted loop playsinline height="100%">
             <source src="./static/videos/gravity_invarient_demo.mov"
@@ -468,7 +487,22 @@
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Projects</h2>
+        <h2 class="title is-3">Related Articles</h2>
+
+        <div class="content has-text-justified">
+          <p style="margin-bottom: 5px;">
+            <strong>The future lies in a pair of tactile hands</strong>
+          </p>
+          <p style="margin-bottom: 5px; font-size: 0.9em;">
+          Nathan F. Lepora
+          </p>
+          <p style="margin-bottom: 5px; font-size: 0.9em;">
+            <i>Science Robotics 9 (91)</i>
+          </p>
+          <p style="margin-bottom: 5px; font-size: 0.9em;">
+            <a href="https://www.science.org/doi/full/10.1126/scirobotics.adq1501"><em>Article</em></a>  
+          </p>
+        </div>
 
         <div class="content has-text-justified">
           <p style="margin-bottom: 5px;">
@@ -476,6 +510,9 @@
           </p>
           <p style="margin-bottom: 5px; font-size: 0.9em;">
           <strong>Max Yang</strong>, Yijiong Lin, Alex Church, John Lloyd, Dandan Zhang, David A.W. Barton, Nathan F. Lepora
+          </p>
+          <p style="margin-bottom: 5px; font-size: 0.9em;">
+            <i>IEEE Robotics and Automation Letters (RA-L) 2023</i>
           </p>
           <p style="margin-bottom: 5px; font-size: 0.9em;">
             <a href="https://ieeexplore.ieee.org/document/10182274"><em>Paper</em></a> /  
