@@ -1,3 +1,3 @@
-# AnyRotate: Gravity-Invarient In-Hand Object Rotation with Sim-to-Real Touch
+# SimShear: Sim-to-Real Shear-based Tactile Servoing
 
-[Project Website](https://maxyang27896.github.io/anyrotate/)
+[Project Website](https://yijionglin.github.io/simshear/)

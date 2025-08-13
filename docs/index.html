@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AnyRotate: Gravity Invariant In-Hand Rotation with Sim-to-Real Touch</title>
+  <title>SimShear: Sim-to-Real Shear-based Tactile Servoing</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -134,42 +134,22 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">AnyRotate: Gravity Invariant In-Hand Object Rotation with Sim-to-Real Touch</h1>
+          <h1 class="title is-2 publication-title">SimShear: Sim-to-Real Shear-based Tactile Servoing</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block" style="margin-right: 5px;">
-              <a href="https://maxyang27896.github.io/">Max Yang</a>,</span>
-            <span class="author-block" style="margin-right: 5px;">
-              <a href="https://scholar.google.com/citations?user=aXnQjHoAAAAJ&hl=en">Chenghua Lu</a>,</span>
-            <span class="author-block" style="margin-right: 5px;">
-              <a href="https://scholar.google.com/citations?user=D7eIiqwAAAAJ&hl=en">Alex Church</a>,
+              <a href="https://scholar.google.com/citations?user=vOhFRtwAAAAJ&hl=en&oi=ao">Kipp Freud</a>,
             </span>
             <span class="author-block" style="margin-right: 5px;">
-              <a href="https://yijionglin.github.io/">Yijiong Lin</a>,
-            </span>
-            <span class="author-block" style="margin-right: 5px;">
-              <a href="https://scholar.google.com/citations?user=uWTWIM0AAAAJ&hl=en">Chris Ford</a>,
-            </span>
-            <span class="author-block" style="margin-right: 5px;">
-              <a href="https://haoran-li.com/">Haoran Li</a>,
-            </span>
-            <span class="author-block" style="margin-right: 5px;">
-              <a href="https://scholar.google.gr/citations?user=kVyW-LEAAAAJ&hl=en">Efi Psomopoulou</a>,
-            </span>
-            <br> 
-            <span class="author-block" style="margin-right: 5px;">
-              <a href="https://cityinthesky.co.uk/">David A.W. Barton</a>,
-            </span>
+              <a href="https://yijionglin.github.io/">Yijiong Lin</a>,</span>
             <span class="author-block" style="margin-right: 5px; margin-bottom: 5px;">
               <a href="https://lepora.com/">Nathan F. Lepora</a>
             </span>
           </div>
-
           <div class="is-size-5 publication-authors" style="margin-bottom: 5px;">
             <span class="author-block">University of Bristol</span>
           </div>
-
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><b><i>Conference on Robot Learning (CoRL) 2024</i></b></span>
+            <span class="author-block"><b><i>9th Conference on Robot Learning (CoRL) 2025</i></b></span>
           </div>
 
           <div class="column has-text-centered">
@@ -231,7 +211,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Multi-axis in-hand object rotation invariant to gravity direction using dense featured sim-to-real touch.
+        Boosting real-World shear-oriented robot tasks via synthetic shear-conditioned tactile images.
       </h2>
     </div>
   </div>
@@ -304,18 +284,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In-hand manipulation is an integral component of human dexterity. Our hands rely on tactile feedback for 
-            stable and reactive motions to ensure objects do not slip away unintentionally during manipulation. 
-            For a robot hand, this level of dexterity requires extracting and utilizing rich contact information for precise motor control. 
-            In this paper we present AnyRotate, a system for gravity-invariant multi-axis in-hand object rotation using dense featured sim-to-real touch. 
-            Our policy is trained in simulation with rich tactile feedback and zero-shot transferred to the real-world. 
-            We introduce an approach for bridging the sim-to-real gap for a dense tactile representation. 
-            Our experiments highlight the benefit of detailed contact information when handling objects with varying properties. 
-            In the real world, we demonstrate a successful transfer of the dense tactile policy, generalizing to a diverse range of 
-            objects for various rotation axes and hand directions, outperforming other forms of low-dimensional touch. 
-            Interestingly, despite not having explicit slip detection, rich multi-fingered tactile sensing can implicitly detect object 
-            movement within grasp and provide a reactive behavior that improves the robustness of the policy, 
-            highlighting the importance of information-rich tactile sensing for in-hand manipulation.
+            We present SimShear: a sim-to-real pipeline for tactile control that allows use of shear information without explicitly 
+            modeling shear dynamics in simulation. Shear, which arises from lateral movements across contact surfaces, are critical 
+            for tasks involving dynamic object interactions but are challenging to simulate. We introduce shPix2pix: a shear-conditioned 
+            U-Net GAN that transforms simulated tactile images absent of shear plus a vector encoding shear information into realistic 
+            equivalents that include shear deformations, and show this outperforms baseline pix2pix methods for simulating tactile images 
+            and pose/shear prediction. This is applied to two control tasks using a pair of low-cost desktop robotic arms equipped with 
+            a vision-based tactile sensor: first, a tactile tracking task, where a follower arm tracks a surface moved by the leader 
+            arm; second, a collaborative co-lift task, where both arms jointly hold an object while the leader arm moves along a 
+            prescribed trajectory. Our method maintain contact errors within 1-2 mm across varied trajectories where shear sensing 
+            is essential for task performance. This work validates the use of sim-to-real shear modeling with rigid-body simulators, 
+            opening new possibilities for simulation in tactile robotics.
           </p>
         </div>
       </div>
@@ -336,7 +315,7 @@
   </div>
 </section>
 
-<section class="section" style="background-color: #f5f5f5;" >
+<!-- <section class="section" style="background-color: #f5f5f5;" >
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-sixths">
@@ -351,7 +330,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- <section class="section";>
   <div class="container is-max-desktop">
@@ -394,15 +373,15 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-four-sixths">
-          <h2 class="title is-3 has-text-centered" style="margin-bottom: 40px">Tactile Sim-to-Real via Feature Extraction</h2>
+          <h2 class="title is-3 has-text-centered" style="margin-bottom: 40px">Shear-based Sim-to-Real Pipeline for Tactile Robotics</h2>
           <img src="./static/images/sim_to_real_touch.drawio.png"
                  class="interpolation-image"
                  alt="Interpolate start reference image."
                  style="margin-top: 10px; margin-bottom: 10px;"/>
           <p style="margin-top: 10px; margin-bottom: 10px; text-align: justify;">
-            We train observation models to bridge the tactile sim-to-real gap. Our observation models are trained on contact data of the sensor on a F/T sensor. 
-            We move the tactile sensor on a flat stimulus mounted above the F/T sensor, and collect tactile images along with the corresponding robot poses and contact forces as labels. 
-            We then train a CNN to extract the contact features that are used in simulation. The dense tactile features we consider are continous readings of contact pose and contact force. 
+              We introduce shPix2pix: a conditional U-Net GAN architecture that incorporates shear information into simulated tactile sensor 
+              images for image-to-image translation. By modeling deformations due to lateral displacements, shPix2pix enables the generation 
+              of realistic tactile images that contain shear deformations not modeled by our rigid-body simulator.
           </p>
       </div>
     </div>
